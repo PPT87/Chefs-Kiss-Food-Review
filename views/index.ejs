@@ -2,15 +2,10 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img 
-        src="<%= user.profile.avatar %>" 
-        alt="<%= user.profile.name %> avatar"
-      >
-    </div>
-  <% } %>
+  <h1>Welcome To Chef's Kiss!</h1>
 </main>
+<div id="app-description">
+  <p>Chef's Kiss is a personal food review app where you can log your eating journey. Never forget if that dish was just OH-SO-GOOD, outright gross or maybe it needed another chance. With Chef's Kiss, your taste buds will thank you!</p>
+</div>
 
 <%- include('./partials/footer') %>

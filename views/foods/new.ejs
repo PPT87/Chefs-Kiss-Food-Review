@@ -3,20 +3,19 @@
 
 <h1>Add Food Review</h1>
 
-<form id="add-new-review-form" action="" method="POST">
+<form id="add-new-review-form" action="/foods" method="POST">
   <label for="name-input">Food:</label> 
-  <input type="text" name="food" id="name-input" placeholder="Chicken Sandwich">
+  <input type="text" name="food" id="name-input" placeholder="ex. Chicken Sandwich">
   <label for="name-input">Restaurant:</label> 
-  <input type="text" name="restaurant" id="restaurant-input" placeholder="Chick-fil-A">
+  <input type="text" name="restaurant" id="restaurant-input" placeholder="ex. Chick-fil-A">
   <label>Rating:
-    <select type="text" name="rating" placeholder="⭐⭐⭐">
+    <select type="text" name="rating">
       <option value="oneStar">⭐</option>
       <option value="twoStar">⭐⭐</option>
-      <option value="threeStar">⭐⭐⭐</option>
+      <option value="threeStar" selected>⭐⭐⭐</option>
       <option value="fourStar">⭐⭐⭐⭐</option>
       <option value="fiveStar">⭐⭐⭐⭐⭐</option>
     </select>
-
   <button type="submit">Submit</button>
 </form>
 
