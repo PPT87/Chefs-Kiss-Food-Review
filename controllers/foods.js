@@ -113,6 +113,10 @@ function createRating(req, res){
   })
 }
 
+function createReview(req, res){
+  console.log("creating a review")
+}
+
 export {
   index,
   newFood as new,
@@ -122,4 +126,5 @@ export {
   edit,
   update,
   createRating,
+  createReview,
 }
