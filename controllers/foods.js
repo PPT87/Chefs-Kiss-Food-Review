@@ -68,14 +68,14 @@ function deleteFood(req, res) {
 function update(req, res) {
   Food.findByIdAndUpdate(req.params.id)
   .then(food => {
-    if(food.owner.equals(req.user.profile._id)){
-      food.updateOne(req.body)
+    // if(food.owner.equals(req.user.profile._id)){
+      food.updateOne(req.body, {new: true})
       .then(()=>{
         res.redirect(`/foods/${food._id}`)
       })
-    } else{
-      throw new Error ("Not Authorized!")
-    }
+    // } else{
+    //   throw new Error ("Not Authorized!")
+    // }
   })
   .catch(err => {
     console.log(err)
@@ -104,8 +104,12 @@ function createReview(req, res){
   Food.findById(req.params.id)
   .then(food => {
     food.reviews.push(req.body)
-    food.save()
-    console.log(req.body)
+      food.save()
+      res.redirect(`/foods/${food._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/foods")
   })
 }
 

@@ -10,8 +10,6 @@ const reviewSchema = new Schema({
 })
 
 
-
-
 const foodSchema = new Schema({
   food: String,
   restaurant: String,

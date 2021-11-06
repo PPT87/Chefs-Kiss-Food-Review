@@ -9,7 +9,8 @@
   <label for="name-input">Restaurant:</label> 
   <input type="text" name="restaurant" id="restaurant-input" value="<%= food.restaurant %>" required>
   <label>Rating:
-    <select type="text" name="rating" value="<%= food.rating %>">
+    <select type="text" name="rating">
+      <option><%= food.rating %></option>
       <option value="⭐️">⭐️</option>
       <option value="⭐️⭐️">⭐️⭐️</option>
       <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
