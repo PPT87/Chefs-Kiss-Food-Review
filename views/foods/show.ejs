@@ -13,17 +13,14 @@
         <th>Rating</th>
       </tr>
     </thead>
-    <tbody>     
-      <% foods.forEach(f => { %> 
+    <tbody> 
         <tr>          
-          <td><%= f.food %> </td>
-          <td><%= f.restaurant %> </td>
-          <td><%= f.rating %> </td>
+          <td><%= foods.food %> </td>
+          <td><%= foods.restaurant %> </td>
+          <td><%= foods.rating %> </td>
         </tr>    
-        <% }) %> 
     </tbody>
   </table>
-  
 </main>
 
 <%- include('../partials/footer') %>

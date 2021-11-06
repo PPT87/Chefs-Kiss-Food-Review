@@ -34,7 +34,7 @@ function createFood(req, res){
 }
 
 function show(req, res) {
-  Food.find({})
+  Food.findById(req.params.id)
   .then(foods => {
     res.render("foods/show", {
       foods,
