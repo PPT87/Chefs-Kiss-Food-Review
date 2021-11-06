@@ -1,11 +1,8 @@
 import { Food } from '../models/food.js'
 
 function index(req, res) {
-  // Find all tacos
   Food.find({})
-  // When we have all the tacos
   .then(foods => {
-    // Do something with the tacos
     res.render("foods/index", {
       title: "All Foods",
       foods,
@@ -26,6 +23,7 @@ function newFood(req, res) {
 
 function createFood(req, res){
   Food.create(req.body)
+  Food.find({})
   .then(food =>{
     res.redirect('/foods')
   })
@@ -36,10 +34,10 @@ function createFood(req, res){
 }
 
 function show(req, res) {
-  Food.findById(req.params.id)
-  .then(food => {
+  Food.find({})
+  .then(foods => {
     res.render("foods/show", {
-      food,
+      foods,
       title: "Details"
     })
   })

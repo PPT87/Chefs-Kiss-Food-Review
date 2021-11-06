@@ -1,6 +1,29 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<h1>Details Page</h1>
+<main>
+  <br>
+  <button><a href="/foods/new">Add Food</a></button>
+  <h1><%= title %> </h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Restaurant</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>     
+      <% foods.forEach(f => { %> 
+        <tr>          
+          <td><%= f.food %> </td>
+          <td><%= f.restaurant %> </td>
+          <td><%= f.rating %> </td>
+        </tr>    
+        <% }) %> 
+    </tbody>
+  </table>
+  
+</main>
 
 <%- include('../partials/footer') %>
