@@ -16,6 +16,9 @@ router.get('/:id', foodsCtrl.show)
 // localhost:3000/foods
 router.post('/', isLoggedIn, foodsCtrl.createFood)
 
+// localhost:3000/food/:id
+router.delete('/:id', foodsCtrl.delete)
+
 export{
   router
 }

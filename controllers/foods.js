@@ -47,9 +47,28 @@ function show(req, res) {
   })
 }
 
+function deleteFood(req, res) {
+  Food.findByIdAndDelete(req.params.id)
+  .then(food => {
+    if (food.owner.equals(req.user.profile._id)) {
+      food.delete()
+      .then(() => {
+        res.redirect("/foods")
+      })
+    } else {    
+      throw new Error ("🚫 Not Authorized! 🚫")
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/foods")
+  })
+}
+
 export {
   index,
   newFood as new,
   createFood,
   show,
+  deleteFood as delete
 }

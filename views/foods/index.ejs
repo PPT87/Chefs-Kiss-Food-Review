@@ -23,8 +23,8 @@
             <a href="/foods/<%= f._id %> ">DETAILS</a>
           </td>
           <td>
-            <form action="" method="POST">
-              <button type="submit">X</button>
+            <form action="/foods/<%= f._id %>?_method=DELETE" method="POST">
+              <button id="trashFood"><i class="fas fa-trash-alt"></i></button>
             </form>
           </td>
         </tr>    
