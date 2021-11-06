@@ -3,10 +3,9 @@
 
 <main>
   <br>
-  <button><a href="/foods/new">Add Food</a></button>
   <h1><%= title %> </h1>
   <table>
-    <thead>
+    <thead>      
       <tr>
         <th>Name</th>
         <th>Restaurant</th>
@@ -14,13 +13,53 @@
       </tr>
     </thead>
     <tbody> 
-        <tr>          
-          <td><%= foods.food %> </td>
-          <td><%= foods.restaurant %> </td>
-          <td><%= foods.rating %> </td>
-        </tr>    
+        <tr>       
+          <td><%= food.food %> </td>
+          <td><%= food.restaurant %> </td>
+          <td><%= food.rating %> </td>
+          <td>           
+              <form action="/foods/<%= food._id %>/edit" method="GET">
+                <button id="editFood"><i class="fas fa-edit" type="submit"></i></button>
+              </form>              
+          </td>
+        </tr>            
     </tbody>
   </table>
+  <h2>Reviews</h2>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Review</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>        
+          <tr>
+            <td>Date goes here</td>           
+            <td>Review goes here</td>
+            <td>rating goes here</td>
+          </tr>                
+      </tbody>
+    </table>  
+    <form 
+    id="add-review-form"
+    action="/foods/<%= food._id %>/reviews"
+    method="POST"
+  >
+    <label for="content-textarea">Review:</label>
+    <textarea name="content" id="content-textarea"></textarea>
+    <label for="rating-select">Rating:</label>
+    <select type="text" name="rating">
+      <option value="⭐️">⭐️</option>
+      <option value="⭐️⭐️">⭐️⭐️</option>
+      <option value="⭐️⭐️⭐️" selected>⭐️⭐️⭐️</option>
+      <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+      <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+    </select>
+    <button type="submit">Add Review</button>
+  </form>
 </main>
 
 <%- include('../partials/footer') %>

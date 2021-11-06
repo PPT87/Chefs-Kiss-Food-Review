@@ -1,22 +1,22 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<h1>Add Food Review</h1>
+<h1>Edit Food Review</h1>
 <section>
-<form id="add-new-review-form" action="/foods" method="POST">
+<form id="edit-review-form" action="/foods/<%= food._id %>?_method=PUT " method="POST">
   <label for="name-input">Food:</label> 
-  <input type="text" name="food" id="name-input" placeholder="ex. Chicken Sandwich" required>
+  <input type="text" name="food" id="name-input" value="<%= food.food %>" required>
   <label for="name-input">Restaurant:</label> 
-  <input type="text" name="restaurant" id="restaurant-input" placeholder="ex. Chick-fil-A" required>
+  <input type="text" name="restaurant" id="restaurant-input" value="<%= food.restaurant %>" required>
   <label>Rating:
-    <select type="text" name="rating">
+    <select type="text" name="rating" value="<%= food.rating %>">
       <option value="⭐️">⭐️</option>
       <option value="⭐️⭐️">⭐️⭐️</option>
-      <option value="⭐️⭐️⭐️" selected>⭐️⭐️⭐️</option>
+      <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
       <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
       <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
     </select>
-  <button type="submit">Submit</button>
+  <button type="submit">Update</button>
 </form>
 </section>
 

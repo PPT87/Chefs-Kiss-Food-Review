@@ -35,9 +35,9 @@ function createFood(req, res){
 
 function show(req, res) {
   Food.findById(req.params.id)
-  .then(foods => {
+  .then(food => {
     res.render("foods/show", {
-      foods,
+      food,
       title: "Details"
     })
   })
@@ -65,10 +65,60 @@ function deleteFood(req, res) {
   })
 }
 
+function update(req, res) {
+  Food.findByIdAndUpdate(req.params.id)
+  .then(food => {
+    if(food.owner.equals(req.user.profile._id)){
+      food.updateOne(req.body)
+      .then(()=>{
+        res.redirect(`/foods/${food._id}`)
+      })
+    } else{
+      throw new Error ("Not Authorized!")
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/foods")
+  })
+}
+
+function edit(req, res){
+  console.log("updating food")
+  console.log(req.params.id)
+  Food.findById(req.params.id)
+  .then(food =>{
+    res.render('foods/edit', {
+      title: "Edit Food",
+      food
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/foods")
+  })
+}
+
+function createReview(req, res){
+  console.log("creating a review")
+  Food.findById(req.params.id)
+  .then(food => {
+    food.reviews.push(req.body)
+    food.save()
+    console.log(req.body)
+  })
+}
+
+
+
+
 export {
   index,
   newFood as new,
   createFood,
   show,
-  deleteFood as delete
+  deleteFood as delete,
+  edit,
+  update,
+  createReview,
 }
