@@ -20,7 +20,7 @@ router.get('/:id/edit', isLoggedIn, foodsCtrl.edit)
 router.post('/', isLoggedIn, foodsCtrl.createFood)
 
 // localhost:3000/foods/:id/review
-router.post('/:id/reviews', isLoggedIn, foodsCtrl.createReview)
+router.post('/:id/reviews', isLoggedIn, foodsCtrl.createRating)
 
 // localhost:3000/food/:id - DELETE
 router.delete('/:id', isLoggedIn, foodsCtrl.delete)

@@ -1,7 +1,7 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<h1>Add Food Review</h1>
+<h1>Add Food Rating</h1>
 <section>
 <form id="add-new-review-form" action="/foods" method="POST">
   <label for="name-input">Food:</label> 
@@ -25,8 +25,28 @@
       <thead>
         <tr>
           <th>Date</th>
-          <th>Review</th>        
+          <th>Review</th>
+          <th>Rating</th>
         </tr>
       </thead>
+      <tbody>
+        <#% food.reviews.forEach(function(review){ %>        
+          <tr>
+            <td><%#= review.createdAt.toLocaleDateString() %> </td>
+            <td><%#= review.content %></td>
+            <td><%#= review.rating %> </td>
+          </tr>
+        <%# }) %>          
+      </tbody>
+    </table>  
+    <form 
+    id="add-review-form"
+    action=""
+    method="POST"
+  >
+    <label for="content-textarea">Review:</label>
+    <textarea name="content" id="content-textarea"></textarea>   
+    <button type="submit">Add Review</button>
+  </form>
 
 <%- include('../partials/footer') %>

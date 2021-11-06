@@ -99,7 +99,7 @@ function edit(req, res){
   })
 }
 
-function createReview(req, res){
+function createRating(req, res){
   console.log("creating a review")
   Food.findById(req.params.id)
   .then(food => {
@@ -121,5 +121,5 @@ export {
   deleteFood as delete,
   edit,
   update,
-  createReview,
+  createRating,
 }
