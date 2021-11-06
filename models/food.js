@@ -3,9 +3,9 @@ import mongoose from 'mongoose'
 
 
 const foodSchema = new mongoose.Schema({
-  food: String,
-  restaurant: String,
-  rating: String,
+  food: {type: String, required: true},
+  restaurant: {type: String, required: true},
+  rating: {type: String, required: true},
 }, {
   timestamps: true
 })

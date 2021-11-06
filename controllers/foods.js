@@ -35,16 +35,17 @@ function createFood(req, res){
   })
 }
 
-function show(req, res){
-  Food.findById(req.params.id, function (err, food){
-    res.render('/foods', {
-      title: 'All Foods List',
+function show(req, res) {
+  Food.findById(req.params.id)
+  .then(food => {
+    res.render("foods/show", {
       food,
+      title: "Details"
     })
   })
-  .catch(err =>{
+  .catch(err => {
     console.log(err)
-    res.redirect('/foods')
+    res.redirect("/foods")
   })
 }
 
