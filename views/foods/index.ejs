@@ -2,15 +2,36 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img 
-        src="<%= user.profile.avatar %>" 
-        alt="<%= user.profile.name %> avatar"
-      >
-    </div>
-  <% } %>
+  <br>
+  <button><a href="/foods/new">Add Food</a></button>
+  <h1><%= title %> </h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Restaurant</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>     
+      <% foods.forEach(f => { %> 
+        <tr>          
+          <td><%= f.food %> </td>
+          <td><%= f.restaurant %> </td>
+          <td><%= f.rating %> </td>
+          <td>
+            <a href="/foods/<%= f._id %> ">DETAILS</a>
+          </td>
+          <td>
+            <form action="" method="POST">
+              <button type="submit">X</button>
+            </form>
+          </td>
+        </tr>    
+        <% }) %> 
+    </tbody>
+  </table>
+  
 </main>
 
 <%- include('../partials/footer') %>

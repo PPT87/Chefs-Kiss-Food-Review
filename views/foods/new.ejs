@@ -2,7 +2,7 @@
 <%- include('../partials/nav') %>
 
 <h1>Add Food Review</h1>
-
+<section>
 <form id="add-new-review-form" action="/foods" method="POST">
   <label for="name-input">Food:</label> 
   <input type="text" name="food" id="name-input" placeholder="ex. Chicken Sandwich">
@@ -18,5 +18,6 @@
     </select>
   <button type="submit">Submit</button>
 </form>
+</section>
 
 <%- include('../partials/footer') %>

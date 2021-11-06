@@ -1,8 +1,10 @@
 import mongoose from 'mongoose'
 
+
+
 const foodSchema = new mongoose.Schema({
   food: String,
-  review: String,
+  restaurant: String,
   rating: String,
 }, {
   timestamps: true

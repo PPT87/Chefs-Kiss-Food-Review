@@ -3,17 +3,25 @@
 <% } %>
 </head>
 <body>
-<nav>
+<nav>  
+  <% if (user?.profile.avatar) { %>
+    <div>
+      <img 
+        src="<%= user.profile.avatar %>" 
+        alt="<%= user.profile.name %> avatar"
+        />
+        <span><%= user.profile.name %></span>
+      <% } %> 
+    </div>
   <a href="/foods">Home</a>
-  <a href="/foods/new">Add Food Review</a>
   <a href="/profiles">Profiles</a>
   <% if (user) { %>
     <a href="/auth/logout">Logout</a>
-  <% } else { %>
-    <a href="/auth/google" class="siwg-link">
-      <button type="submit" class="siwg">
-        <img id="siwg-image" alt="Sign in with Google" />
-      </button>
-    </a>
-  <% } %>
+    <% } else { %>
+      <a href="/auth/google" class="siwg-link">
+        <button type="submit" class="siwg">
+          <img id="siwg-image" alt="Sign in with Google" />
+        </button>
+      </a>
+    <% } %>
 </nav>
