@@ -9,7 +9,6 @@ const reviewSchema = new Schema({
   timestamps: true
 })
 
-
 const foodSchema = new Schema({
   food: String,
   restaurant: String,

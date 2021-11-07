@@ -3,6 +3,7 @@
 
 <h1>Edit Food Review</h1>
 <section>
+  
 <form id="edit-review-form" action="/foods/<%= food._id %>?_method=PUT " method="POST">
   <label for="name-input">Food:</label> 
   <input type="text" name="food" id="name-input" value="<%= food.food %>" required>
@@ -19,6 +20,7 @@
     </select>
   <button type="submit">Update</button>
 </form>
+
 </section>
 
 <%- include('../partials/footer') %>

@@ -17,10 +17,12 @@
           <td><%= food.food %> </td>
           <td><%= food.restaurant %> </td>
           <td><%= food.rating %> </td>
-          <td>           
+          <td>   
+            <% if (food.owner.equals(user?.profile._id)) { %>
               <form action="/foods/<%= food._id %>/edit" method="GET">
                 <button id="editFood"><i class="fas fa-edit" type="submit"></i></button>
-              </form>              
+              </form>   
+              <% } %>
           </td>
         </tr>            
     </tbody>

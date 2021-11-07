@@ -23,9 +23,11 @@
             <a href="/foods/<%= f._id %> ">DETAILS</a>
           </td>
           <td>
+            <% if (f.owner.equals(user?.profile._id)) { %>
             <form action="/foods/<%= f._id %>?_method=DELETE" method="POST">
               <button id="trashFood"><i class="fas fa-trash-alt"></i></button>
             </form>
+            <% } %> 
           </td>
         </tr>    
         <% }) %> 

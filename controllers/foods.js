@@ -22,6 +22,7 @@ function newFood(req, res) {
 }
 
 function createFood(req, res){
+  req.body.owner = req.user.profile._id
   Food.create(req.body)
   Food.find({})
   .then(food =>{
