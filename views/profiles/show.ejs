@@ -14,20 +14,13 @@
       </tr>
     </thead>
     <tbody>     
-      <% profile.foods.forEach(f => { %> 
+      <% food.forEach(f => { %> 
         <tr>          
           <td><%= f.food %> </td> 
           <td><%= f.restaurant %> </td>
           <td><%= f.rating %> </td>
           <td>
             <a href="/foods/<%= f._id %> ">DETAILS</a>
-          </td>
-          <td>
-            <% if (f.owner.equals(user?.profile._id)) { %>
-            <form action="/foods/<%= f._id %>?_method=DELETE" method="POST">
-              <button id="trashFood"><i class="fas fa-trash-alt"></i></button>
-            </form>
-            <% } %> 
           </td>
         </tr>    
         <% }) %> 

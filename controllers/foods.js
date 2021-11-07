@@ -1,7 +1,8 @@
 import { Food } from '../models/food.js'
+import { Profile } from '../models/profile.js'
 
 function index(req, res) {
-  Food.find({})
+  Food.find({owner: req.user.profile._id})
   .then(foods => {
     res.render("foods/index", {
       title: "All Foods",
@@ -18,14 +19,17 @@ function newFood(req, res) {
   console.log("Add New Food")
   res.render('foods/new', {
     title: "Enter New Food",
+    owner: req.user.profile._id,
   })
 }
 
 function createFood(req, res){
   req.body.owner = req.user.profile._id
   Food.create(req.body)
-  Food.find({})
-  .then(food =>{
+  .then(foods =>{
+    Profile.updateOne({_id:foods.owner},{
+      $push:{foods: food}
+    })
     res.redirect('/foods')
   })
   .catch(err =>{
