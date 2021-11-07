@@ -1,5 +1,4 @@
 import { Profile } from "../models/profile.js"
-import { Food } from "../models/food.js"
 
 
 function index(req, res){

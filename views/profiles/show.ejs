@@ -3,73 +3,36 @@
 
 <main>
   <br>
-  <% if (profile.avatar) { %>
-    <div>
-      <img 
-        class="profile-avatar"
-        src="<%= profile.avatar %>" 
-        alt="<%= profile.name %> avatar"
-      >
-    </div>
-  <% } %>
+  <button><a href="/foods/new">Add Food</a></button>
   <h1><%= title %> </h1>
   <table>
-    <thead>      
+    <thead>
       <tr>
         <th>Name</th>
         <th>Restaurant</th>
         <th>Rating</th>
       </tr>
     </thead>
-    <tbody> 
-        <tr>       
-          <td><%= food.food %> </td>
-          <td><%= food.restaurant %> </td>
-          <td><%= food.rating %> </td>
-          <td>     
-              <form action="/foods/<%= food._id %>/edit" method="GET">
-                <button id="editFood"><i class="fas fa-edit" type="submit"></i></button>
-              </form>        
+    <tbody>     
+      <% profile.foods.forEach(f => { %> 
+        <tr>          
+          <td><%= f.food %> </td> 
+          <td><%= f.restaurant %> </td>
+          <td><%= f.rating %> </td>
+          <td>
+            <a href="/foods/<%= f._id %> ">DETAILS</a>
           </td>
-        </tr>            
+          <td>
+            <% if (f.owner.equals(user?.profile._id)) { %>
+            <form action="/foods/<%= f._id %>?_method=DELETE" method="POST">
+              <button id="trashFood"><i class="fas fa-trash-alt"></i></button>
+            </form>
+            <% } %> 
+          </td>
+        </tr>    
+        <% }) %> 
     </tbody>
-  </table>  
-  <h2>Reviews</h2>  
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Review</th>
-          <th>Rating</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% food.reviews.forEach(function(review){ %>        
-          <tr>
-            <td><%= review.createdAt.toLocaleDateString() %> </td>
-            <td><%= review.content %></td>
-            <td><%= review.rating %> </td>
-          </tr>
-        <% }) %>          
-      </tbody>
-    </table>  
-    <form 
-    id="add-review-form"
-    action="/foods/<%= food._id %>/reviews"
-    method="POST"
-  >
-    <label for="content-textarea">Review:</label>
-    <textarea name="content" id="content-textarea"></textarea>
-    <label for="rating-select">Rating:</label>
-    <select type="text" name="rating">
-      <option value="⭐️">⭐️</option>
-      <option value="⭐️⭐️">⭐️⭐️</option>
-      <option value="⭐️⭐️⭐️" selected>⭐️⭐️⭐️</option>
-      <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
-      <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
-    </select>
-    <button type="submit">Add Review</button>
-  </form>
+  </table>
 </main>
 
 <%- include('../partials/footer') %>
