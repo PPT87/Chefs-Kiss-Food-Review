@@ -23,12 +23,15 @@ function newFood(req, res) {
   })
 }
 
-function createFood(req, res){
+function createReview(req, res){
   req.body.owner = req.user.profile._id
-  Food.create(req.body)
-  .then(foods =>{
-    Profile.updateOne({_id:foods.owner},{
-      $push:{foods: food}
+  Food.create(req.body)  
+  .then(food =>{
+    food.reviews.push(req.body)
+    food.save()
+    console.log('creating a new review')
+    Profile.updateOne({_id:food.owner},{
+      $push:{food: food}
     })
     res.redirect('/foods')
   })
@@ -104,13 +107,14 @@ function edit(req, res){
   })
 }
 
-function createRating(req, res){
-  console.log("creating a review")
+function addReview(req, res){
+  console.log("adding a new review in food details")
   Food.findById(req.params.id)
   .then(food => {
     food.reviews.push(req.body)
-      food.save()
-      res.redirect(`/foods/${food._id}`)
+      food.save(()=>{
+        res.redirect(`/foods/${food._id}`)
+      })
   })
   .catch(err => {
     console.log(err)
@@ -118,18 +122,15 @@ function createRating(req, res){
   })
 }
 
-function createReview(req, res){
-  console.log("creating a review")
-}
+
 
 export {
   index,
   newFood as new,
-  createFood,
+  createReview,
   show,
   deleteFood as delete,
   edit,
   update,
-  createRating,
-  createReview,
+  addReview,
 }
