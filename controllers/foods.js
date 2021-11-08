@@ -56,7 +56,7 @@ function show(req, res) {
 }
 
 function deleteFood(req, res) {
-  Food.findByIdAndDelete(req.params.id)
+  Food.findById(req.params.id)
   .then(food => {
     if (food.owner.equals(req.user.profile._id)) {
       food.delete()
@@ -117,8 +117,6 @@ function addReview(req, res){
     res.redirect("/foods")
   })
 }
-
-
 
 export {
   index,
