@@ -5,6 +5,7 @@
   <br>
   <button><a href="/foods/new">Add Review</a></button>
   <h1><%= title %> </h1>
+  <% if (foods.length) { %> 
   <table>
     <thead>
       <tr>
@@ -13,6 +14,9 @@
         <th>Rating</th>
       </tr>
     </thead>
+    <% } else { %> 
+      <h2>No Reviews Yet</h2>
+      <% } %> 
     <tbody>     
       <% foods.forEach(f => { %> 
         <tr>          
@@ -32,7 +36,7 @@
         </tr>    
         <% }) %> 
     </tbody>
-  </table>  
+  </table>    
 </main>
 
 <%- include('../partials/footer') %>
