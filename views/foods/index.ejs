@@ -29,7 +29,7 @@
           <td>
             <% if (f.owner.equals(user?.profile._id)) { %>
             <form action="/foods/<%= f._id %>?_method=DELETE" method="POST">
-              <button id="trashFood"><i class="fas fa-trash-alt"></i></button>
+              <button id="trashFood"><i class="fas fa-trash-alt" type="submit"></i></button>
             </form>
             <% } %> 
           </td>

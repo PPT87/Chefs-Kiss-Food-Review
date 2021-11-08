@@ -56,6 +56,7 @@ function show(req, res) {
 }
 
 function deleteFood(req, res) {
+  console.log('deleting food review')
   Food.findById(req.params.id)
   .then(food => {
     if (food.owner.equals(req.user.profile._id)) {
@@ -89,7 +90,6 @@ function update(req, res) {
 
 function edit(req, res){
   console.log("updating food")
-  console.log(req.params.id)
   Food.findById(req.params.id)
   .then(food =>{
     res.render('foods/edit', {
