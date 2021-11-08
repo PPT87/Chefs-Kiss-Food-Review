@@ -4,8 +4,8 @@
 <main>
   <br>
   <button><a href="/foods/new">Add Review</a></button>
-  <h1><%= title %> </h1>
   <% if (foods.length) { %> 
+  <h1><%= title %> </h1>
   <table>
     <thead>
       <tr>
@@ -15,7 +15,7 @@
       </tr>
     </thead>
     <% } else { %> 
-      <h2>No Reviews Yet</h2>
+      <h2>Add A New Review To Begin</h2>
       <% } %> 
     <tbody>     
       <% foods.forEach(f => { %> 
