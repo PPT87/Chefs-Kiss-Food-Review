@@ -40,3 +40,7 @@
   position: absolute;
   width: 1px; 
 }
+
+#profile-img{
+  border-radius: 50px;
+}
