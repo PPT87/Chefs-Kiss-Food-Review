@@ -75,15 +75,11 @@ function deleteFood(req, res) {
 
 function update(req, res) {
   Food.findByIdAndUpdate(req.params.id)
-  .then(food => {
-    // if(food.owner.equals(req.user.profile._id)){
+  .then(food => {    
       food.updateOne(req.body, {new: true})
       .then(()=>{
         res.redirect(`/foods/${food._id}`)
-      })
-    // } else{
-    //   throw new Error ("Not Authorized!")
-    // }
+      })   
   })
   .catch(err => {
     console.log(err)

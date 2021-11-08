@@ -26,8 +26,7 @@
           </td>
         </tr>            
     </tbody>
-  </table>
-  
+  </table>  
   <h2>Reviews</h2>  
     <table>
       <thead>
@@ -47,6 +46,7 @@
         <% }) %>          
       </tbody>
     </table>  
+    <% if (food.owner.equals(user?.profile._id)) { %>
     <form 
     id="add-review-form"
     action="/foods/<%= food._id %>/reviews"
@@ -64,6 +64,7 @@
     </select>
     <button type="submit">Add Review</button>
   </form>
+  <% } %> 
 </main>
 
 <%- include('../partials/footer') %>
