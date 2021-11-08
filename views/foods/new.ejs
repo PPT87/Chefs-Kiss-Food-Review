@@ -1,13 +1,17 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/new.css">
 <%- include('../partials/nav') %>
 
-<h1>Add Food Rating</h1>
-<section>
+
 <form id="add-new-rating-form" action="/foods" method="POST">
+<h1>Add New Review</h1>
+<section>
   <label for="name-input">Food:</label> 
   <input type="text" name="food" id="name-input" placeholder="ex. Chicken Sandwich" required>
   <label for="name-input">Restaurant:</label> 
   <input type="text" name="restaurant" id="restaurant-input" placeholder="ex. Chick-fil-A" required>
+  <label for="name-input">Location:</label> 
+  <input type="text" name="location" id="location-input" placeholder="ex. Columbus,OH" required>
   <label>Rating:
     <select type="text" name="rating">
       <option value="⭐️">⭐️</option>

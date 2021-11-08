@@ -9,6 +9,7 @@
       <tr>
         <th>Name</th>
         <th>Restaurant</th>
+        <th>Location</th>
         <th>Rating</th>
       </tr>
     </thead>
@@ -16,6 +17,7 @@
         <tr>       
           <td><%= food.food %> </td>
           <td><%= food.restaurant %> </td>
+          <td><%= food.location %> </td>
           <td><%= food.rating %> </td>
           <td>   
             <% if (food.owner.equals(user?.profile._id)) { %>
