@@ -2,28 +2,55 @@
 <link rel="stylesheet" href="/stylesheets/new.css">
 <%- include('../partials/nav') %>
 
+<form id="add-new-review-form" action="/foods" method="POST">
 
-<form id="add-new-rating-form" action="/foods" method="POST">
-<h1>Add New Review</h1>
-<section>
-  <label for="name-input">Food:</label> 
-  <input type="text" name="food" id="name-input" placeholder="ex. Chicken Sandwich" required>
-  <label for="name-input">Restaurant:</label> 
-  <input type="text" name="restaurant" id="restaurant-input" placeholder="ex. Chick-fil-A" required>
-  <label for="name-input">Location:</label> 
-  <input type="text" name="location" id="location-input" placeholder="ex. Columbus,OH" required>
-  <label>Rating:
-    <select type="text" name="rating">
-      <option value="⭐️">⭐️</option>
-      <option value="⭐️⭐️">⭐️⭐️</option>
-      <option value="⭐️⭐️⭐️" selected>⭐️⭐️⭐️</option>
-      <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
-      <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
-    </select><br><br>    
-<label for="content-textarea">Review:</label>
-<textarea name="content" id="content-textarea"></textarea> 
-<button type="submit">Submit</button>
+<!-- form header -->
+<div class="form-header">
+  <h1>Add New Review</h1>
+</div>
+
+<!-- form body -->
+<div class="form-body">
+
+<!-- Food -->
+<div class="form-group">
+  <label for="food" class="label-title">Food:</label> 
+  <input type="text" name="food" id="food-input" class="form-input" placeholder="ex. Chicken Sandwich" required>
+</div>
+
+<!-- Restaurant and Location -->
+
+<div class="horizontal-group">
+  <div class="form-group left">
+    <label for="restaurant" class="label-title">Restaurant:</label> 
+    <input type="text" name="restaurant" id="restaurant-input" class="form-input" placeholder="ex. Chick-fil-A" required>
+  </div>
+<div class="form-group right">
+  <label for="location">Location:</label> 
+  <input type="text" name="location" id="location-input" class="form-input" placeholder="ex. Columbus,OH" required>
+</div>
+</div>
+  
+  <!-- rating -->
+  <div class="form-group">
+    <label>Rating:
+      <select type="text" name="rating" id="rating-input" class="form-input">
+        <option value="⭐️">⭐️</option>
+        <option value="⭐️⭐️">⭐️⭐️</option>
+        <option value="⭐️⭐️⭐️" selected>⭐️⭐️⭐️</option>
+        <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+        <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+      </select><br><br>    
+  </div>
+
+  <!-- review -->
+  <div class="form-group">
+    <label for="content-textarea">Review:</label>
+    <textarea name="content" id="review-input" class="form-input" rows="4" cols="50" style="height:auto"></textarea>
+  </div>
+<button type="submit" class="btn">Submit</button>
+</div>
 </form>
-</section> 
+
 
 <%- include('../partials/footer') %>
