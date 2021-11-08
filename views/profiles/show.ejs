@@ -3,15 +3,19 @@
 
 <main>  
   <br>
-  <h1><%= title %> </h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Restaurant</th>
-        <th>Rating</th>
-      </tr>
-    </thead>
+  <% if (food.length) { %> 
+    <h1><%= title %> </h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Restaurant</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <% } else { %> 
+        <h2><%= user.profile.name %> Has No Reviews Yet</h2>
+        <% } %> 
     <tbody>     
       <% food.forEach(f => { %> 
         <tr>          
