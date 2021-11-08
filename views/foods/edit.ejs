@@ -1,28 +1,56 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/edit.css">
 <%- include('../partials/nav') %>
 
-<h1>Edit Food Review</h1>
-<section>
+<form id="edit-review-form" action="/foods/<%= food._id %>?_method=PUT" method="POST">
+
+<!-- form header -->
+<div class="form-header">
+  <h1>Edit Food Review</h1>
+</div>
+
+<!-- form body -->
+<div class="form-body">
+
+<!-- Food -->
+<div class="form-group">
+  <label for="food" class="label-title">Food:</label> 
+  <input type="text" name="food" id="food-input" class="form-input" value="<%= food.food %>" required>
+</div>
+
+<!-- Restaurant and Location -->
+<div class="horizontal-group">
+  <div class="form-group left">
+    <label for="restaurant" class="label-title">Restaurant:</label> 
+    <input type="text" name="restaurant" id="restaurant-input" class="form-input" value="<%= food.restaurant %>" required>
+  </div>
+<div class="form-group right">
+  <label for="location" class="label-title">Location:</label> 
+  <input type="text" name="location" id="location-input" class="form-input" value="<%= food.location %>" required>
+</div>
+</div>
   
-<form id="edit-review-form" action="/foods/<%= food._id %>?_method=PUT " method="POST">
-  <label for="name-input">Food:</label> 
-  <input type="text" name="food" id="name-input" value="<%= food.food %>" required>
-  <label for="name-input">Restaurant:</label> 
-  <input type="text" name="restaurant" id="restaurant-input" value="<%= food.restaurant %>" required>
-  <label for="name-input">Location:</label> 
-  <input type="text" name="location" id="location-input" value="<%= food.location %> " required>
-  <label>Rating:
-    <select type="text" name="rating">
-      <option><%= food.rating %></option>
-      <option value="⭐️">⭐️</option>
-      <option value="⭐️⭐️">⭐️⭐️</option>
-      <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
-      <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
-      <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
-    </select>
-  <button type="submit">Update</button>
+  <!-- rating -->
+  <div class="form-group">
+    <label class="label-title">Rating:
+      <select type="text" name="rating" id="rating-input" class="form-input">
+        <option><%= food.rating %></option>
+        <option value="⭐️">⭐️</option>
+        <option value="⭐️⭐️">⭐️⭐️</option>
+        <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+        <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+        <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+      </select><br><br>    
+  </div>
+
+  <!-- review -->
+  <div class="form-group">
+    <label for="content" class="label-title">Review:</label>
+    <textarea name="content" id="review-input" class="form-input" rows="4" cols="50" style="height:auto"></textarea>
+  </div>
+<button type="submit" class="btn">Submit</button>
+</div>
 </form>
 
-</section>
 
 <%- include('../partials/footer') %>

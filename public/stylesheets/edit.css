@@ -1,9 +1,11 @@
 body{
-  background-image: url('../images/add-new-food-pattern1.jpg');
-  background-size: cover;
+  background-image: url('../images/edit.jpeg');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
-#add-new-review-form{
+#edit-review-form{
   width:700px;
   margin: 100px auto;
   background:linear-gradient(to right, #ebe7e7 0%, #d1c8c8 50%, #d3caca 99%);
