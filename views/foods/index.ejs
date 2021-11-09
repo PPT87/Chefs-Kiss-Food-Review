@@ -7,7 +7,6 @@
     <button><a href="/foods/new" class="addBtn">Add Review</a></button>
   <% if (foods.length) { %> 
   <h1><%= title %> </h1>   
-
   <table class="reviewTbl">
     <thead>
       <tr>
@@ -30,7 +29,7 @@
           <td><%= f.restaurant %> </td>
           <td><%= f.rating %> </td>
           <td>
-            <a href="/foods/<%= f._id %>">DETAILS</a>
+            <a class="details" href="/foods/<%= f._id %>">DETAILS</a>
           </td>
           <td>
             <% if (f.owner.equals(user?.profile._id)) { %>

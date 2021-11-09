@@ -1,29 +1,33 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/index.css">
 <%- include('../partials/nav') %>
 
 <main>  
   <br>
   <% if (food.length) { %> 
     <h1><%= title %> </h1>
-    <table>
+    <table class="reviewTbl">
       <thead>
         <tr>
           <th>Name</th>
           <th>Restaurant</th>
           <th>Rating</th>
+          <th></th>    
         </tr>
       </thead>
+
       <% } else { %> 
         <h2><%= user.profile.name %> Has No Reviews Yet</h2>
         <% } %> 
-    <tbody>     
+
+    <tbody class="tbl-body">     
       <% food.forEach(f => { %> 
-        <tr>          
+        <tr class="info-row">
           <td><%= f.food %> </td> 
-          <td><%= f.restaurant %> </td>          
+          <td><%= f.restaurant %> </td>
           <td><%= f.rating %> </td>
           <td>
-            <a href="/foods/<%= f._id %> ">DETAILS</a>
+            <a class="details" href="/foods/<%= f._id %>">DETAILS</a>
           </td>
         </tr>    
         <% }) %> 
