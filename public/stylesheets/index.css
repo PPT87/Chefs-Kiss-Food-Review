@@ -1,6 +1,48 @@
-body{
+body {
   background-image: url('../images/homepage.jpeg');
   background-repeat: no-repeat;
   background-size: auto;
   background-position-y: -60px;
+}
+
+.reviewTbl{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1.5rem;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0);
+}
+
+.reviewTbl thead tr{
+  background-color: #2ec218;
+  color: #ffffff;
+  text-align: left;
+}
+
+.reviewTbl th,
+.reviewTbl td{
+  padding: 12px 15px;
+}
+
+.reviewTbl tbody tr{
+  border-bottom: 1px solid #dddddd;
+}
+
+.reviewTbl tbody tr:nth-of-type(even){
+  background-color: #f3f3f3;
+}
+
+#trashFood{
+  color: rgb(182, 17, 17);
+  background: none;
+  border: none;
+  transform: scale(0.90);
+  transition: all .2s ease-in-out;
+}
+
+#trashFood:hover{
+  transform: scale(1.2);
+  cursor: pointer;
 }

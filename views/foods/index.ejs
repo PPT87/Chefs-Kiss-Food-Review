@@ -4,21 +4,26 @@
 
 <main>
   <br>
-    <button><a href="/foods/new">Add Review</a></button>
+    <button><a href="/foods/new" class="addBtn">Add Review</a></button>
   <% if (foods.length) { %> 
-  <h1><%= title %> </h1>
-  <table>
+  <h1><%= title %> </h1>   
+
+  <table class="reviewTbl">
     <thead>
       <tr>
         <th>Name</th>
         <th>Restaurant</th>
         <th>Rating</th>
+        <th id="details-cell"></th>     
+        <th id="delete-cell"></th>        
       </tr>
     </thead>
+
     <% } else { %> 
       <h2>Add A New Review To Begin</h2>
       <% } %> 
-    <tbody>     
+
+    <tbody class="tbl-body">     
       <% foods.forEach(f => { %> 
         <tr>          
           <td><%= f.food %> </td> 
@@ -37,7 +42,7 @@
         </tr>    
         <% }) %> 
     </tbody>
-  </table>    
+  </table>   
 </main>
 
 <%- include('../partials/footer') %>
