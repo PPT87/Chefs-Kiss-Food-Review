@@ -27,7 +27,6 @@
           <td><%= f.rating %> </td>
           <td>
             <a class="details" href="/foods/<%= f._id %>">DETAILS</a>
-            <i class="bi bi-info-circle-fill"></i>
           </td>
           <td>
             <% if (f.owner.equals(user?.profile._id)) { %>

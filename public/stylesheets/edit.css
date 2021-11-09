@@ -1,8 +1,8 @@
 body{
   background-image: url('../images/edit.jpeg');
-  background-position: left;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
 }
 
 #edit-review-form{
@@ -22,7 +22,6 @@ body{
   font-size: 30px;
   text-align:center;
   color:#666;
-  padding:20px 0;
   border-bottom:1px solid #cccccc;
 }
 
@@ -78,6 +77,6 @@ body{
 }
 
 .btn:hover {
- background-color: #169c7b;
- color:white;
+  background-color: #169c7b;
+  color:white;
 }

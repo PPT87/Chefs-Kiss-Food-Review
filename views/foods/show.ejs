@@ -1,10 +1,11 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/show.css">
 <%- include('../partials/nav') %>
 
 <main>
   <br>
   <h1><%= title %> </h1>
-  <table>
+  <table class="detailsTbl">
     <thead>      
       <tr>
         <th>Name</th>
@@ -13,8 +14,8 @@
         <th>Rating</th>
       </tr>
     </thead>
-    <tbody> 
-        <tr>       
+    <tbody class="tbl-body"> 
+        <tr class="info-row">       
           <td><%= food.food %> </td>
           <td><%= food.restaurant %> </td>
           <td><%= food.location %> </td>
@@ -29,18 +30,18 @@
         </tr>            
     </tbody>
   </table>  
-  <h2>Reviews</h2>  
-    <table>
+ 
+    <table class="reviewTbl">
       <thead>
         <tr>
           <th>Date</th>
-          <th>Review</th>
+          <th>Reviews</th>
           <th>Rating</th>
         </tr>
       </thead>
       <tbody>
         <% food.reviews.forEach(function(review){ %>        
-          <tr>
+          <tr class="review-row">
             <td><%= review.createdAt.toLocaleDateString() %> </td>
             <td><%= review.content %></td>
             <td><%= review.rating %> </td>

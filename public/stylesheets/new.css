@@ -10,9 +10,6 @@ body{
   border-radius: 10px;
 }
 
-/*---------------------------------------*/
-/* Form Header */
-/*---------------------------------------*/
 .form-header  {
   background-color: #EFF0F1;
   border-top-left-radius: 10px;
@@ -27,9 +24,6 @@ body{
   border-bottom:1px solid #cccccc;
 }
 
-/*---------------------------------------*/
-/* Form Body */
-/*---------------------------------------*/
 .form-body {
   padding:10px 40px;
   color:#666;
