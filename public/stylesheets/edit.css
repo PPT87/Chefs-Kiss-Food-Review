@@ -6,6 +6,7 @@ body{
 }
 
 #edit-review-form{
+  border-collapse: collapse;
   width:700px;
   margin: 100px auto;
   background:linear-gradient(to right, #ebe7e7 0%, #d1c8c8 50%, #d3caca 99%);

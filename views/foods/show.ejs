@@ -4,33 +4,37 @@
 
 <main>
   <br>
-  <h1><%= title %> </h1>
-  <table class="detailsTbl">
-    <thead>      
-      <tr>
-        <th>Name</th>
-        <th>Restaurant</th>
-        <th>Location</th>
-        <th>Rating</th>
-      </tr>
-    </thead>
-    <tbody class="tbl-body"> 
-        <tr class="info-row">       
-          <td><%= food.food %> </td>
-          <td><%= food.restaurant %> </td>
-          <td><%= food.location %> </td>
-          <td><%= food.rating %> </td>
-          <td>   
-            <% if (food.owner.equals(user?.profile._id)) { %>
-              <form action="/foods/<%= food._id %>/edit" method="GET">
-                <button id="editFood"><i class="fas fa-edit" type="submit"></i></button>
-              </form>   
-              <% } %>
-          </td>
-        </tr>            
-    </tbody>
-  </table>  
+  <!-- form header -->
+<div class="form-header">
+  <h1><%= food.food %> </h1>
+  <% if (food.owner.equals(user?.profile._id)) { %>
+    <form action="/foods/<%= food._id %>/edit" method="GET">
+      <button id="editFood"><i class="fas fa-edit" type="submit"></i></button>
+    </form>   
+    <% } %> 
+  </div>
 
+  <!-- form body -->
+  <div class="form-body">  
+
+    <!-- food rating -->
+    <div>
+      <label for="food"><%= food.rating %></label>
+    </div>
+
+    <!-- restaurant -->
+    <div>
+      <label for="food"><%= food.restaurant %></label>
+    </div>
+
+    <!-- location -->
+    <div>
+      <label for="food"><%= food.location %></label>
+    </div>
+            
+</div>
+
+  <div class="tableFixHead">  
     <table class="reviewTbl">
       <thead>
         <tr>
@@ -49,6 +53,8 @@
         <% }) %>          
       </tbody>
     </table><br><br>
+    </div>
+
 
     <div class="form-body">
 
