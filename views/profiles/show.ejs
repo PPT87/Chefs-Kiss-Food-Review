@@ -6,6 +6,7 @@
   <br>
   <% if (food.length) { %> 
     <h1><%= title %> </h1>
+    <div class="tableFixHead"> 
     <table class="reviewTbl">
       <thead>
         <tr>
@@ -33,6 +34,7 @@
         <% }) %> 
     </tbody>
   </table>
+</div>
 </main>
 
 <%- include('../partials/footer') %>
