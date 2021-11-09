@@ -3,7 +3,10 @@
 <%- include('../partials/nav') %>
 
 <main>
+  <!-- form body -->
+  <div class="form-body-rating">  
   <br>
+
   <!-- form header -->
 <div class="form-header">
   <h1><%= food.food %> </h1>
@@ -14,26 +17,23 @@
     <% } %> 
   </div>
 
-  <!-- form body -->
-  <div class="form-body">  
-
     <!-- food rating -->
-    <div>
+    <div class="rating">
       <label for="food"><%= food.rating %></label>
     </div>
 
     <!-- restaurant -->
-    <div>
+    <div class="restaurant">
       <label for="food"><%= food.restaurant %></label>
     </div>
 
     <!-- location -->
-    <div>
+    <div class="location">
       <label for="food"><%= food.location %></label>
     </div>
-            
 </div>
 
+<!-- review table -->
   <div class="tableFixHead">  
     <table class="reviewTbl">
       <thead>

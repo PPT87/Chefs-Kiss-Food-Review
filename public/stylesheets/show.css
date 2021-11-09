@@ -3,6 +3,22 @@ body {
   background-size: cover;
 }
 
+.form-body-rating{
+  width: 40%;
+  margin: 0 auto;
+  background:linear-gradient(to right, #ebe7e7 0%, #d1c8c8 50%, #d3caca 99%);
+  text-align: center;
+}
+
+.form-header{
+  
+}
+
+#editFood{
+  float: right;
+}
+
+
 
 
 
