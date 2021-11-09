@@ -3,9 +3,9 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <br>
   <% if (foods.length) { %> 
-  <h1><%= title %> </h1>   
+  <h1><%= title %> </h1>
+  <div class="tableFixHead">    
   <table class="reviewTbl">
     <thead>
       <tr>
@@ -39,6 +39,7 @@
         <% }) %> 
     </tbody>
   </table>   
+</div>
 </main>
 
 <%- include('../partials/footer') %>

@@ -30,7 +30,7 @@
         </tr>            
     </tbody>
   </table>  
- 
+
     <table class="reviewTbl">
       <thead>
         <tr>
@@ -48,24 +48,30 @@
           </tr>
         <% }) %>          
       </tbody>
-    </table>  
+    </table><br><br>
+
+    <div class="form-body">
+
     <% if (food.owner.equals(user?.profile._id)) { %>
-    <form 
-    id="add-review-form"
-    action="/foods/<%= food._id %>/reviews"
-    method="POST"
-  >
-    <label for="content-textarea">Review:</label>
-    <textarea name="content" id="content-textarea" required></textarea>
-    <label for="rating-select">Rating:</label>
-    <select type="text" name="rating">
+      <div class="form-group">
+    <form id="add-review-form" action="/foods/<%= food._id %>/reviews" method="POST"> 
+    <label for="label-title">Rating:</label>
+    <select type="text" name="rating" id="rating-input" class="form-input">
       <option value="⭐️">⭐️</option>
       <option value="⭐️⭐️">⭐️⭐️</option>
       <option value="⭐️⭐️⭐️" selected>⭐️⭐️⭐️</option>
       <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
       <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
-    </select>
-    <button type="submit">Add Review</button>
+    </select><br><br>
+  </div>
+
+<div class="form-group">
+  <label for="content" class="label-title">Review:</label>
+  <textarea name="content" id="review-input" class="form-input" rows="4" cols="50" style="height:auto"></textarea>
+</div>
+    
+<button type="submit" class="btn">Add Review</button>
+  </div>
   </form>
   <% } %> 
 </main>

@@ -5,15 +5,26 @@ body {
   background-position-y: -60px;
 }
 
+.tableFixHead{
+  overflow-y: auto;
+  width: 100%;
+  height: 70vh;
+}
+
+th{
+  position: sticky;
+  top: 0;
+}
+
 .reviewTbl{
   border-collapse: collapse;
-  margin: 20px 0;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 1.8rem;
   min-width: 400px;
   border-radius: 5px 5px 0 0;
-  overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0);
-  width: 80%;
+  width: 90%;
 }
 
 .reviewTbl thead tr{

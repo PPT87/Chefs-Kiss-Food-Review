@@ -1,6 +1,5 @@
 body{
   background-image: url('../images/add-new-food-pattern1.jpg');
-  background-size: cover;
 }
 
 #add-new-review-form{
@@ -73,9 +72,10 @@ body{
   border-radius:5px;
   color:#ffffff;
   cursor:pointer;
+  width: 100%;
 }
 
 .btn:hover {
  background-color: #169c7b;
- color:white;
+ color:white; 
 }

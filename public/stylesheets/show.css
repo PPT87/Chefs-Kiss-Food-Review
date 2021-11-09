@@ -1,10 +1,11 @@
 body {
-  
+  background-image: url('../images/show.jpeg');
+  background-size: cover;
 }
 
 .reviewTbl{
   border-collapse: collapse;
-  margin: 20px 0;
+  margin-top: 60px;
   font-size: 1.6rem;
   min-width: 400px;
   border-radius: 5px 5px 0 0;
@@ -51,4 +52,51 @@ body {
 
 .reviewTbl tbody tr:nth-of-type(even){
   background-color: rgb(64, 161, 158, 0.95);
+}
+
+#add-review-form{
+  width:700px;
+  border-radius: 10px;
+}
+
+.form-body {
+  padding:10px 40px;
+  color:black;
+  font-size: 16px;
+}
+
+.form-body .label-title {
+  color: black;
+  font-size: 19px;
+}
+
+.form-body .form-input {
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #333333;
+    text-align: left;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    outline: none;
+}
+
+.btn {
+  display:inline-block;
+  padding:10px 20px;
+  background-color: #1BBA93;
+  font-size:16px;
+  border:none;
+  border-radius:5px;
+  color:#ffffff;
+  cursor:pointer;
+}
+
+.btn:hover {
+ background-color: #169c7b;
+ color:white;
 }
