@@ -4,7 +4,6 @@
 
 <main>
   <br>
-    <button><a href="/foods/new" class="addBtn">Add Review</a></button>
   <% if (foods.length) { %> 
   <h1><%= title %> </h1>   
   <table class="reviewTbl">
@@ -17,11 +16,9 @@
         <th id="delete-cell"></th>        
       </tr>
     </thead>
-
     <% } else { %> 
       <h2>Add A New Review To Begin</h2>
       <% } %> 
-
     <tbody class="tbl-body">     
       <% foods.forEach(f => { %> 
         <tr class="info-row">
@@ -30,6 +27,7 @@
           <td><%= f.rating %> </td>
           <td>
             <a class="details" href="/foods/<%= f._id %>">DETAILS</a>
+            <i class="bi bi-info-circle-fill"></i>
           </td>
           <td>
             <% if (f.owner.equals(user?.profile._id)) { %>
