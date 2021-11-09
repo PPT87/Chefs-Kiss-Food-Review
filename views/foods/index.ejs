@@ -25,12 +25,12 @@
 
     <tbody class="tbl-body">     
       <% foods.forEach(f => { %> 
-        <tr>          
+        <tr class="info-row">
           <td><%= f.food %> </td> 
           <td><%= f.restaurant %> </td>
           <td><%= f.rating %> </td>
           <td>
-            <a href="/foods/<%= f._id %> ">DETAILS</a>
+            <a href="/foods/<%= f._id %>">DETAILS</a>
           </td>
           <td>
             <% if (f.owner.equals(user?.profile._id)) { %>

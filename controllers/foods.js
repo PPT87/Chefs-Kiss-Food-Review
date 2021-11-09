@@ -5,7 +5,7 @@ function index(req, res) {
   Food.find({owner: req.user.profile._id})
   .then(foods => {
     res.render("foods/index", {
-      title: "All Foods",
+      title: "My Reviews",
       foods,
     })
   })
