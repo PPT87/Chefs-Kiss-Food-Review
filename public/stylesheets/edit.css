@@ -1,8 +1,9 @@
 body{
   background-image: url('../images/edit.jpeg');
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 #edit-review-form{

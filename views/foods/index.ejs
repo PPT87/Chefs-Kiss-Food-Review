@@ -3,6 +3,7 @@
 <%- include('../partials/nav') %>
 
 <main>
+ 
   <% if (foods.length) { %> 
   <h1><%= title %> </h1>
   <div class="tableFixHead">    
@@ -26,9 +27,7 @@
           <td><%= f.restaurant %> </td>
           <td><%= f.rating %> </td>
           <td>
-            <a class="details" href="/foods/<%= f._id %>">DETAILS</a>
-            <button id="trashFood"><i class="fa-solid fa-circle-info"></i></button>   
-
+            <a class="details" href="/foods/<%= f._id %>"><i class="fas fa-info-circle"></i></a>
           </td>
           <td>
             <% if (f.owner.equals(user?.profile._id)) { %>
@@ -42,6 +41,7 @@
     </tbody>
   </table>   
 </div>
+
 </main>
 
 <%- include('../partials/footer') %>

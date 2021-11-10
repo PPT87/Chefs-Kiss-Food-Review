@@ -1,23 +1,13 @@
 <%- include('./partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/main.css">
 <%- include('./partials/nav') %>
 
-<main>
-  <h1>Welcome To Chef's Kiss!</h1>
-</main>
+<main>  
+  <h1>👨‍🍳  Welcome To Chef's Kiss! 💋</h1>
 <div id="app-description">
-  <p>Chef's Kiss is a personal food review app where you can log your eating journey. Never forget if that dish was just OHH-SO-GOOD 🤌 , outright gross 🤢 or maybe it needed another chance 🤔. </p>
-  <p>With Chef's Kiss, your taste buds will thank you!</p>
-  <p>Sign in to start your food journey now!</p>
+  <h3>Chef's Kiss is a personal food review app where you can log your eating journey. Never forget if that dish was just OHH-SO-GOOD 🤌 , outright gross 🤢 or maybe it needed another chance 🤔. </h3>
 </div>
 <br>
-<% if (user) { %>
-  <a href="/auth/logout">Logout</a>
-<% } else { %>
-  <a href="/auth/google" class="siwg-link">
-    <button type="submit" class="siwg">
-      <img id="siwg-image" alt="Sign in with Google" />
-    </button>
-  </a>
-<% } %>
+</main>
 
 <%- include('./partials/footer') %>

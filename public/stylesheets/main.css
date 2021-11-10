@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
+/* resets font size to be 62.5% of the user preference - 
+     in most browser configurations this will be 10px */
+:root {
+    font-size: 62.5%
+}
+
+body {
+  background-image: url('../images/main.jpg');
+  background-size: cover;  
+/* Use a system font, if none are available use an available sans-sarif font */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+
+main{
+  background-color: rgb(255, 255, 255);
+  opacity: 90%;
+  margin-top: 40px;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 70px;
+  border: solid 1px black;
+}
+
+p{
+  font-size: 3rem;
+}
+
+h3{
+  margin: 0;
+  padding: 0;
+}
+
+#app-description{
+  text-align: center;
+  width: 80%;
+}

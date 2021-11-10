@@ -1,5 +1,8 @@
 body{
-  background-image: url('../images/add-new-food-pattern1.jpg');
+  background-color: wheat;
+  /* background-image: url('../images/foodcartoon.jpeg'); */
+  /* background-size: cover;
+  background-repeat: no-repeat; */
 }
 
 #add-new-review-form{
