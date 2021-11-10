@@ -1,8 +1,7 @@
 body{
-  background-color: wheat;
-  /* background-image: url('../images/foodcartoon.jpeg'); */
-  /* background-size: cover;
-  background-repeat: no-repeat; */
+  background-image: url('../images/addnew.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #add-new-review-form{
@@ -83,17 +82,13 @@ body{
   color:white; 
 }
 
-
-
-
-
 @media screen and (max-width: 767px) {
 
   body{
-    background-color: wheat;
-    /* background-image: url('../images/foodcartoon.jpeg'); */
-    /* background-size: cover;
-    background-repeat: no-repeat; */
+    background-image: url('../images/addnew.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
   }
   
   #add-new-review-form{
@@ -103,7 +98,4 @@ body{
     border-radius: 10px;
   }
   
-  
-
-
 }
