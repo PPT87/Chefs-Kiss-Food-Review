@@ -1,32 +1,60 @@
 body {
   background-image: url('../images/show.jpeg');
-  background-size: cover;
+  background-size: auto;
 }
 
 .form-body-rating{
   width: 40%;
-  margin: 0 auto;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   background:linear-gradient(to right, #ebe7e7 0%, #d1c8c8 50%, #d3caca 99%);
   text-align: center;
+  position: relative;
+  border-radius: 20px;
 }
 
-.form-header{
-  
+h1{
+  margin: 0;
+  padding: 0;
+}
+
+.stars{
+  font-size: 2.8rem;
+}
+
+p{
+  font-size: 1.7rem;
+  margin: 0;
+  padding: 0;
 }
 
 #editFood{
-  float: right;
+  transform: scale(0.95);
+  transition: all .2s ease-in-out;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #169c7b;
+  background: no-repeat;
+  border: none;
+  font-size: 2.2rem;
 }
 
+#editFood:hover{
+  transform: scale(1.3);
+  cursor: pointer;
+}
 
+.restaurant p{
+  margin-top: 10px;
+  font-size: 2rem;
+}
 
-
-
-
-
-
-
-
+.location p{
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
 
 
 
@@ -35,10 +63,20 @@ body {
 
 .tableFixHead{
   overflow-y: auto;
-  width: 100%;
-  height: 65vh;
+  width: 90%;
+  height: 60vh;
+  position: relative;
 }
 
+th{
+  position: sticky;
+  top: 0;
+  background: black;
+}
+
+.reviewStars{
+  font-size: 1.8rem;
+}
 
 .reviewTbl{
   border-collapse: collapse;
@@ -46,7 +84,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-size: 1.6rem;
-  min-width: 400px;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0);
@@ -101,12 +138,10 @@ body {
 .form-body {
   padding:10px 40px;
   color:black;
-  font-size: 16px;
 }
 
 .form-body .label-title {
   color: black;
-  font-size: 19px;
 }
 
 .form-body .form-input {
@@ -137,6 +172,6 @@ body {
 }
 
 .btn:hover {
- background-color: #169c7b;
- color:white;
+  background-color: #169c7b;
+  color:white;
 }

@@ -9,7 +9,7 @@
 
   <!-- form header -->
 <div class="form-header">
-  <h1><%= food.food %> </h1>
+  <h1><%= food.food %></h1> 
   <% if (food.owner.equals(user?.profile._id)) { %>
     <form action="/foods/<%= food._id %>/edit" method="GET">
       <button id="editFood"><i class="fas fa-edit" type="submit"></i></button>
@@ -19,19 +19,20 @@
 
     <!-- food rating -->
     <div class="rating">
-      <label for="food"><%= food.rating %></label>
+      <p class="stars"><%= food.rating %></p>
     </div>
 
     <!-- restaurant -->
     <div class="restaurant">
-      <label for="food"><%= food.restaurant %></label>
+      <p class="foodRestaurant"><%= food.restaurant %></p>
     </div>
 
     <!-- location -->
     <div class="location">
-      <label for="food"><%= food.location %></label>
+      <p class="foodLocation"><%= food.location %></p>
     </div>
 </div>
+<br>
 
 <!-- review table -->
   <div class="tableFixHead">  
@@ -48,20 +49,20 @@
           <tr class="review-row">
             <td><%= review.createdAt.toLocaleDateString() %> </td>
             <td><%= review.content %></td>
-            <td><%= review.rating %> </td>
+            <td class="reviewStars"><%= review.rating %> </td>
           </tr>
         <% }) %>          
       </tbody>
-    </table><br><br>
+    </table>
     </div>
 
 
+<!-- add another review form -->
     <div class="form-body">
-
     <% if (food.owner.equals(user?.profile._id)) { %>
       <div class="form-group">
     <form id="add-review-form" action="/foods/<%= food._id %>/reviews" method="POST"> 
-    <label for="label-title">Rating:</label>
+    <label class="reviewRating" for="label-title">Rating:</label>
     <select type="text" name="rating" id="rating-input" class="form-input">
       <option value="⭐️">⭐️</option>
       <option value="⭐️⭐️">⭐️⭐️</option>
