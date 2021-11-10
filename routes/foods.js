@@ -8,7 +8,7 @@ const router = Router()
 router.get('/', isLoggedIn, foodsCtrl.index)
 
 // localhost:3000/foods/mew - GET
-router.get('/new', foodsCtrl.new)
+router.get('/new', isLoggedIn, foodsCtrl.new)
 
 // localhost:3000/foods/:id - GET
 router.get('/:id', foodsCtrl.show)
