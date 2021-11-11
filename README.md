@@ -39,7 +39,7 @@ This app demonstrates a full CRUD application using RESTful conventions
 3. <strong>U</strong>pdate any food review
 4. <strong>D</strong>elete any food review
 5. Responsive to desktop and mobile view
-<br><br><img src="public/images/Mobile view.png" width='300'/> &nbsp; &nbsp; <img src="public/images/Mobile view 2.png" width='300'/>&nbsp; &nbsp; <img src="public/images/Mobile view 3.png" width='300'/>
+<br><br><img src="public/images/Mobile View.png" width='300'/> &nbsp; &nbsp; <img src="public/images/Mobile view 2.png" width='300'/>&nbsp; &nbsp; <img src="public/images/Mobile view 3.png" width='300'/>
 
 ## What I Used:
 - MongoDB
