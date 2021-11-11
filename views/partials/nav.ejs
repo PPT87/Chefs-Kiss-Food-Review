@@ -3,52 +3,14 @@
 <% } %>
 </head>
 <body>
-  <div class="nav-wrapper">  
-  <nav class="navbar">
-    <a class="logo" href="/foods">💋</a>
-  <ul class="nav-menu">
-    <li class="nav-items"><a href="/foods" class="nav-link">My Reviews</a></li>
-    <li class="nav-items"><a href="/foods/new" class="nav-link">Add New Review</a></li>
-    <li class="nav-items"><a href="/profiles" class="nav-link"><i class="fas fa-users"></i> Community</a></li>
-    <li class="nav-items"><% if (user) { %>
-      <a href="/auth/logout" class="nav-link">Logout</a>
-      <% } else { %>
-        <a href="/auth/google" class="siwg-link">
-          <button type="submit" class="siwg">
-            <img id="siwg-image" alt="Sign in with Google" />
-          </button>
-        </a>
-      <% } %>
-    </li>
-  </ul>
-  <div class="hamburger">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>     
-  </div>
-</nav>
-</div>
-
-
-<!-- <nav>  
-  <%# if (user?.profile.avatar) { %>
-    <div>
-      <img id="avatar"
-        src="<%#= user.profile.avatar %>" 
-        alt="<%#= user.profile.name %> avatar"
-        />
-      <%# } %> 
-    </div>
+<nav>  
+    <div id="logo"> 💋 </div>
   <a href="/foods">My Reviews</a>
   <a href="/foods/new">Add New Review</a>
   <a href="/profiles">Community Page</a>
-  <%# if (user) { %>
+  <% if (user) { %>
     <a href="/auth/logout">Logout</a>
-    <%# } else { %>
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
-          <img id="siwg-image" alt="Sign in with Google" />
-        </button>
-      </a>
-    <%# } %>
-</nav> -->
+    <% } else { %>
+      <a href="/auth/google">Login</a>
+    <% } %>
+</nav>
