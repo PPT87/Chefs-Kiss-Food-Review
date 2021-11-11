@@ -4,6 +4,9 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  font-family: 'Rubik', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
 }
 
 .form-body-rating{
@@ -22,6 +25,14 @@ h1{
   padding: 0;
 }
 
+.fa-utensils{
+  font-size: 15px;
+}
+
+.fa-location-arrow{
+  font-size: 13px;
+}
+
 .stars{
   font-size: 2.8rem;
 }
@@ -36,8 +47,8 @@ p{
   transform: scale(0.95);
   transition: all .2s ease-in-out;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  bottom: 6%;
+  right: 1%;
   color: #169c7b;
   background: no-repeat;
   border: none;
@@ -190,6 +201,9 @@ table{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    font-family: 'Rubik', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
   }
   
   .form-body-rating{
@@ -221,8 +235,8 @@ table{
     transform: scale(0.95);
     transition: all .2s ease-in-out;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    bottom: 6%;
+  right: 1%;
     color: #169c7b;
     background: no-repeat;
     border: none;

@@ -26,7 +26,7 @@ body {
 }
 
 nav {
-  background-color: rgb(44, 44, 44);
+  background-color: rgba(247, 247, 247, 70%);
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
@@ -43,9 +43,7 @@ h1 {
   font-size: 3.6rem;
 }
 
-h2 {
-  font-size: 3rem;
-}
+
 
 h3 {
   font-size: 2.4rem;
@@ -68,7 +66,7 @@ section {
 }
 
 a {
-  color: #00B7FF;
+  color: #323333;
 }
 
 pre {
@@ -100,4 +98,13 @@ nav > a {
 
 #avatar{
   border-radius: 50px;
+}
+
+.logo{
+  border: solid 1px black;
+  border-radius: 50%;
+  background-color: black;
+  height: 68px;
+  width: 68px;
+  font-size: 45px;
 }

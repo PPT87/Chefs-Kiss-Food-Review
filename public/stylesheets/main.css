@@ -23,7 +23,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 /* Use a system font, if none are available use an available sans-sarif font */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: 'Rubik', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
 }
@@ -31,15 +31,21 @@ body {
 h1{
   font-size: 4rem;    
   text-decoration: underline;
+  font-weight: 900px;
 }
 
 h3{
   font-size: 2.5rem;    
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #app-description{
-  margin-left: 2px;
-  margin-right: 2px;
+  background-color: white;
+  width: 60%;
+  border: solid 1px black;
+  border-radius: 25px;
+  text-align: center;
 }
 
 h4{
@@ -48,7 +54,7 @@ h4{
 }
 
 button{
-margin: 0;
+  margin-bottom: 10px;
 }
 
 
@@ -60,43 +66,39 @@ margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
   /* Use a system font, if none are available use an available sans-sarif font */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    font-family: 'Rubik', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
           Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     margin: 0;
   }
-  
-  main{
-    opacity: 90%;
-    margin-top: 40px;
+
+  #app-description{
+    background-color: rgb(207, 207, 207);
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 30px;
     border: solid 1px black;
+    border-radius: 20px;
     text-align: center;
   }
   
   h1{
-    font-size: 2.5rem;    
+    font-size: 2.7rem;    
     text-decoration: underline;
+    font-weight: 900px;
+    
   }
   
   h3{
-    font-size: 1.5rem;    
+    font-size: 1.6rem;    
+    margin-left: 10px;
+    margin-right: 10px;
   }
   
-  #app-description{
-    margin-left: 2px;
-    margin-right: 2px;
-  }
-
   h4{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 0;
   }
 
 button{
-  margin: 0;
+  margin-bottom: 10px;
   
 }
 }

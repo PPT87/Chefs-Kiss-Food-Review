@@ -5,11 +5,11 @@
 <body>
   <div class="nav-wrapper">  
   <nav class="navbar">
-    <a href="">nav-logo</a>
+    <a class="logo" href="/foods">💋</a>
   <ul class="nav-menu">
     <li class="nav-items"><a href="/foods" class="nav-link">My Reviews</a></li>
     <li class="nav-items"><a href="/foods/new" class="nav-link">Add New Review</a></li>
-    <li class="nav-items"><a href="/profiles" class="nav-link">Community Page</a></li>
+    <li class="nav-items"><a href="/profiles" class="nav-link"><i class="fas fa-users"></i> Community</a></li>
     <li class="nav-items"><% if (user) { %>
       <a href="/auth/logout" class="nav-link">Logout</a>
       <% } else { %>
