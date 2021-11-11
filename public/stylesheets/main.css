@@ -41,11 +41,13 @@ h3{
 }
 
 #app-description{
-  background-color: white;
-  width: 60%;
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
   border: solid 1px black;
   border-radius: 25px;
+  margin-top: 10px;
   text-align: center;
+  width: 60%;
 }
 
 h4{
@@ -56,8 +58,6 @@ h4{
 button{
   margin-bottom: 10px;
 }
-
-
 
 @media screen and (max-width: 767px) {
   body {
@@ -72,7 +72,8 @@ button{
   }
 
   #app-description{
-    background-color: rgb(207, 207, 207);
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);    
     width: 90%;
     border: solid 1px black;
     border-radius: 20px;

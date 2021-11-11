@@ -21,7 +21,10 @@ body {
 }
 
 h1{
-  margin: 0;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 0;
   padding: 0;
 }
 
@@ -189,10 +192,6 @@ table{
   background-color: rgba(255, 255, 255, .4);
 }
 
-
-
-
-
 @media screen and (max-width: 767px) {
 
   body {
@@ -217,7 +216,10 @@ table{
   }
   
   h1{
-    margin: 0;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0;
     padding: 0;
   }
   
@@ -260,7 +262,7 @@ table{
   
   .tableFixHead{
     overflow-y: auto;
-    width: 85%;
+    width: 95%;
     height: 50vh;
   }
   

@@ -45,13 +45,6 @@ th{
   font-size: 2rem;
 }
 
-/* .tbl-body
-.info-row:hover {
-  background: #f2f3ff;
-  outline: none;
-  cursor: pointer;
-} */
-
 .reviewTbl th,
 .reviewTbl td{
   padding: 12px 15px;
@@ -112,7 +105,7 @@ th{
   
   .tableFixHead{
     overflow-y: auto;
-    width: 90%;
+    width: 95%;
     height: 60vh;
   }
   
@@ -141,14 +134,6 @@ th{
   
   .reviewTbl tbody tr:nth-of-type(odd){
     background-color: rgba(233, 170, 136, 0.95)
-  }
-  
-  .details{
-    color: rgb(19, 72, 107);
-  }
-  
-  .reviewTbl tbody tr:nth-of-type(even){
-    background-color: rgb(64, 161, 158, 0.95);
   }
   
   #trashFood{
