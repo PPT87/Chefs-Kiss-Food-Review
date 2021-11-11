@@ -9,7 +9,7 @@ body{
 #edit-review-form{
   border-collapse: collapse;
   width:700px;
-  margin: 100px auto;
+  margin: auto;
   background:linear-gradient(to right, #ebe7e7 0%, #d1c8c8 50%, #d3caca 99%);
   border-radius: 10px;
 }
@@ -95,8 +95,8 @@ body{
   }
   
   #edit-review-form{
+    margin-top: 0;
     width:90%;
-    margin: 100px auto;
     background:linear-gradient(to right, #ebe7e7 0%, #d1c8c8 50%, #d3caca 99%);
     border-radius: 10px;
   }

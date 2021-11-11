@@ -6,10 +6,17 @@ body {
   background-position: 15%;
 }
 
+h1{
+  text-align: center;
+  margin-top: 20px;
+}
+
 .tableFixHead{
   overflow-y: auto;
-  width: 90%;
-  height: 50vh;
+  height: 68vh;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 th{
@@ -21,13 +28,11 @@ th{
 
 .reviewTbl{
   border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
   font-size: 1.8rem;
-  min-width: 400px;
   border-radius: 5px 5px 0 0;
   box-shadow: 0 0 20px rgba(0, 0, 0);
-  width: 90%;
+  
 }
 
 .reviewTbl thead tr{
@@ -77,6 +82,17 @@ th{
 
 #foodDetails{
   font-size: 20px;
+}
+
+.fa-info-circle{
+  font-size: 20px;
+  transform: scale(0.95);
+  transition: all .2s ease-in-out;
+}
+
+.fa-info-circle:hover{
+  transform: scale(1.3);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
@@ -141,8 +157,7 @@ th{
   #trashFood:hover{
     transform: scale(1.3);
     cursor: pointer;
-  }
-  
+  }  
 
   .fa-info-circle{
     font-size: 1.7rem;
