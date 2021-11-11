@@ -78,7 +78,7 @@ pre {
 nav > a {
   margin-left: 6%;
   text-decoration: none;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,9 +107,9 @@ nav{
 @media screen and (max-width: 767px) {
   nav > a {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     margin-left: 1%;
-    margin-right: 3px;
+    margin-right: 2px;
     padding-right: 0;
     padding: 0;
     text-decoration: none;
@@ -120,7 +120,7 @@ nav{
   }
 
   a:last-child{
-    margin-right: 7%;
+    margin-right: 6%;
   }
 
 }
