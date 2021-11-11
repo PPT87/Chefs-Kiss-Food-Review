@@ -28,12 +28,7 @@ nav {
   background-color: rgba(249, 252, 255, 70%);
   font-size: 1.6rem;
   display: flex;
-}
-
-.nav-items{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 main {
@@ -76,7 +71,6 @@ pre {
 }
 
 nav > a {
-  margin-left: 6%;
   text-decoration: none;
   font-size: 2.5rem;
   display: flex;
