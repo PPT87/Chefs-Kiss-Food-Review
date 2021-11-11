@@ -1,6 +1,10 @@
 body{
-  background-color: wheat;
+  background-image: url('../images/profiles.png');
+  background-size: cover;  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: 'Rubik', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
 }
+
