@@ -89,6 +89,7 @@ body{
     background-image: url('../images/addnew.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     
   }
   
