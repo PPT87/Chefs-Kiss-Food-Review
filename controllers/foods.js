@@ -65,7 +65,7 @@ function deleteFood(req, res) {
         res.redirect("/foods")
       })
     } else {    
-      throw new Error ("🚫 Not Authorized! 🚫")
+      throw new Error ("Not Authorized")
     }
   })
   .catch(err => {
