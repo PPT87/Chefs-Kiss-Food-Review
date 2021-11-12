@@ -35,7 +35,7 @@ function show(req, res) {
                 title: `${profile.name}'s Food Reviews`,
                 self,
                 isSelf,
-                food,
+                food,            
               })
             })
         })
