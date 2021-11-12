@@ -64,7 +64,6 @@ This app demonstrates a full CRUD application using RESTful conventions
 ### Wallpaper resources:
   - [wallpaper.dog](https://wallpaper.dog)
   - [ohsobeautifulpaper.com](https://ohsobeautifulpaper.com/2015/06/june-desktop-downloads/)
-  - [dribble.com](https://dribbble.com/shots/1630446-Fast-Food-pattern/attachments/8906926?mode=media)
 
 ### Icons used found here!
   - [fontawesome.com](https://fontawesome.com/)
