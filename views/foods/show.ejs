@@ -3,11 +3,8 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <!-- form body -->
   <div class="form-body-rating">  
   <br>
-
-  <!-- form header -->
 <div class="form-header">
   <h1><%= food.food %></h1> 
   <% if (food.owner.equals(user?.profile._id)) { %>
@@ -16,25 +13,17 @@
     </form>   
     <% } %> 
   </div>
-
-    <!-- food rating -->
     <div class="rating">
       <p class="stars"><%= food.rating %></p>
     </div>
-
-    <!-- restaurant -->
     <div class="restaurant">
       <p class="foodRestaurant"><i class="fas fa-utensils"></i> <%= food.restaurant %></p>
     </div>
-
-    <!-- location -->
     <div class="location">
       <p class="foodLocation"><i class="fas fa-location-arrow"></i> <%= food.location %></p>
     </div>
 </div>
 <br>
-
-<!-- review table -->
   <div class="tableFixHead">  
     <table class="reviewTbl">
       <thead>
@@ -55,8 +44,6 @@
       </tbody>
     </table>
     </div>
-
-<!-- add another review form -->
     <div class="form-body">
     <% if (food.owner.equals(user?.profile._id)) { %>
       <div class="form-group">

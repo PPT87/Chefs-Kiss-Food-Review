@@ -3,26 +3,26 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <% if (foods.length) { %> 
+  <% if (foods.length) { %>
   <h1><%= title %> </h1>
-  <div class="tableFixHead">    
-  <table class="reviewTbl">
-    <thead>
-      <tr>
-        <th>Food</th>
-        <th>Restaurant</th>
-        <th>Rating</th>
-        <th id="details-cell"></th>     
-        <th id="delete-cell"></th>        
-      </tr>
-    </thead>
-    <% } else { %> 
+  <div class="tableFixHead">
+    <table class="reviewTbl">
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Restaurant</th>
+          <th>Rating</th>
+          <th id="details-cell"></th>
+          <th id="delete-cell"></th>
+        </tr>
+      </thead>
+      <% } else { %>
       <h1>Add A New Review To Begin</h1>
-      <% } %> 
-    <tbody class="tbl-body">     
-      <% foods.forEach(f => { %> 
+      <% } %>
+      <tbody class="tbl-body">
+        <% foods.forEach(f => { %>
         <tr class="info-row">
-          <td><%= f.food %> </td> 
+          <td><%= f.food %> </td>
           <td><%= f.restaurant %> </td>
           <td><%= f.rating %> </td>
           <td>
@@ -33,14 +33,13 @@
             <form action="/foods/<%= f._id %>?_method=DELETE" method="POST">
               <button id="trashFood"><i class="fas fa-trash-alt" type="submit"></i></button>
             </form>
-            <% } %> 
+            <% } %>
           </td>
-        </tr>    
-        <% }) %> 
-    </tbody>
-  </table>   
-</div>
-
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>

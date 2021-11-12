@@ -3,7 +3,10 @@ import mongoose from 'mongoose'
 const profileSchema = new mongoose.Schema({
   name: String,
   avatar: String,
-  foods: [{type: mongoose.Schema.Types.ObjectId, ref: 'Food'}],
+  foods: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Food'
+  }],
 }, {
   timestamps: true
 })

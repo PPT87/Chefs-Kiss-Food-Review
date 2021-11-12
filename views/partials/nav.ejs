@@ -1,16 +1,18 @@
 <% if (!user) { %>
-  <link rel="stylesheet" href="/stylesheets/siwg.css">
+<link rel="stylesheet" href="/stylesheets/siwg.css">
 <% } %>
 </head>
+
 <body>
-<nav>  
-  <% if (user) { %>
-    <a href="/foods"><div id="logo"> 💋 </div></a>
-  <a href="/foods">My Reviews</a>
-  <a href="/foods/new">Add New Review</a>
-  <a href="/profiles">Community Page</a>
-  <a href="/auth/logout">Logout</a>
+  <nav>
+    <% if (user) { %>
+    <a href="/foods">
+      <div id="logo"> 💋 </div>
+    </a>
+    <a href="/foods">My Reviews</a>
+    <a href="/foods/new">Add New Review</a>
+    <a href="/profiles">Community Page</a>
+    <a href="/auth/logout">Logout</a>
     <% } else { %>
-      
     <% } %>
-</nav>
+  </nav>

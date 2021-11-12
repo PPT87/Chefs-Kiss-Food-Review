@@ -3,22 +3,14 @@
 <%- include('../partials/nav') %>
 
 <form id="add-new-review-form" action="/foods" method="POST">
-
-<!-- form header -->
 <div class="form-header">
   <h1>Add New Review</h1>
 </div>
-
-<!-- form body -->
 <div class="form-body">
-
-<!-- Food -->
 <div class="form-group">
   <label for="food" class="label-title">Food:</label> 
   <input type="text" name="food" id="food-input" class="form-input" placeholder="ex. Chicken Sandwich" required>
 </div>
-
-<!-- Restaurant and Location -->
 <div class="horizontal-group">
   <div class="form-group left">
     <label for="restaurant" class="label-title">Restaurant:</label> 
@@ -29,8 +21,6 @@
   <input type="text" name="location" id="location-input" class="form-input" placeholder="ex. Columbus,OH" required>
 </div>
 </div>
-  
-  <!-- rating -->
   <div class="form-group">
     <label class="label-title">Rating:
       <select type="text" name="rating" id="rating-input" class="form-input">
@@ -41,8 +31,6 @@
         <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
       </select><br><br>    
   </div>
-
-  <!-- review -->
   <div class="form-group">
     <label for="content" class="label-title">Review:</label>
     <textarea name="content" id="review-input" class="form-input" rows="4" cols="50" style="height:auto"></textarea>
@@ -50,6 +38,5 @@
 <button type="submit" class="btn">Submit</button>
 </div>
 </form>
-
 
 <%- include('../partials/footer') %>

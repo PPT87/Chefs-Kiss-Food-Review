@@ -2,39 +2,37 @@
 <link rel="stylesheet" href="/stylesheets/index.css">
 <%- include('../partials/nav') %>
 
-<main>  
+<main>
   <br>
-  <% if (food.length) { %> 
-    <h1><%= title %> </h1>
-    <div class="tableFixHead"> 
+  <% if (food.length) { %>
+  <h1><%= title %> </h1>
+  <div class="tableFixHead">
     <table class="reviewTbl">
       <thead>
         <tr>
           <th>Name</th>
           <th>Restaurant</th>
           <th>Rating</th>
-          <th></th>    
+          <th></th>
         </tr>
       </thead>
-
-      <% } else { %> 
-        <h1><%= user.profile.name %> Has No Reviews Yet</h1>
-        <% } %> 
-
-    <tbody class="tbl-body">     
-      <% food.forEach(f => { %> 
+      <% } else { %>
+      <h1><%= user.profile.name %> Has No Reviews Yet</h1>
+      <% } %>
+      <tbody class="tbl-body">
+        <% food.forEach(f => { %>
         <tr class="info-row">
-          <td><%= f.food %> </td> 
+          <td><%= f.food %> </td>
           <td><%= f.restaurant %> </td>
           <td><%= f.rating %> </td>
           <td>
             <a class="details" href="/foods/<%= f._id %>"><i class="fas fa-info-circle"></i></a>
           </td>
-        </tr>    
-        <% }) %> 
-    </tbody>
-  </table>
-</div>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>
